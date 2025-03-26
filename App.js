@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.2,
-    shadowRadius: 10,
+    shadowRadius: 4,
   },
   image: {
     width: "100%",
