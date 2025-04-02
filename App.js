@@ -16,13 +16,13 @@ export default function App() {
   const [fontsLoaded] = useFonts({ Inter_300Light });
 
   if (!fontsLoaded) {
-    return <Text>Carregando fontes...</Text>;
+    return <Text style={{ color: "#fff" }}>Carregando fontes...</Text>;
   }
 
   return (
     <View style={styles.container}>
       <Text style={styles.header}>Objeto</Text>
-      
+
       <FlatList
         data={carros}
         keyExtractor={(item) => item.id}
@@ -48,21 +48,20 @@ const styles = StyleSheet.create({
     backgroundColor: "#2c2c2e",
     borderRadius: 10,
     marginBottom: 15,
-    flexDirection: "row", // Faz com que a imagem e o texto fiquem lado a lado
-    alignItems: "center", // Alinha os itens verticalmente
+    flexDirection: "row",
+    alignItems: "center",
     padding: 10,
   },
   image: {
-    width: 300,
-    height: 300,
-    resizeMode: "contain",
-    borderRadius: 40,
-    marginRight: 10, // Espaçamento entre a imagem e o texto
+    width: 120, 
+    height: 120, 
+    resizeMode: "cover", 
+    borderRadius: 10, 
+    marginRight: 10,
   },
   info: {
-    flex: 1, // Faz com que o texto ocupe o espaço restante
+    flex: 1,
   },
   carName: { fontSize: 18, fontFamily: "Inter_300Light", fontWeight: "bold", color: "#fff" },
   carDetails: { fontSize: 14, fontFamily: "Inter_300Light", color: "#bbb" },
 });
-
